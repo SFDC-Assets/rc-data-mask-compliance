@@ -1,6 +1,6 @@
 # sfdx-data-mask-compliance
 
-
+This is an SFDX project that contains code for checking if fields that have a compliance categorization specified also have a Data Mask policy configured.
 
 ## Development
 
