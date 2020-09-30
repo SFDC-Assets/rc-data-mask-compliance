@@ -1,0 +1,27 @@
+minimum_cumulusci_version: '3.16.0'
+project:
+    name: sfdx-data-mask-compliance
+    package:
+        name: sfdx-data-mask-compliance
+        api_version: '49.0'
+    git:
+    source_format: sfdx
+    dependencies:
+        - namespace: datamask
+          version: 2.404
+
+tasks:
+    robot:
+        options:
+            suites: robot/sfdx-data-mask-compliance/tests
+            options:
+                outputdir: robot/sfdx-data-mask-compliance/results
+
+    robot_testdoc:
+        options:
+            path: robot/sfdx-data-mask-compliance/tests
+            output: robot/sfdx-data-mask-compliance/doc/sfdx-data-mask-compliance_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
