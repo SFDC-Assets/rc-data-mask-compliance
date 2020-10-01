@@ -81,7 +81,7 @@
     <screens>
         <name>Choose_Action</name>
         <label>Choose Action</label>
-        <locationX>400</locationX>
+        <locationX>399</locationX>
         <locationY>75</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -89,6 +89,25 @@
         <connector>
             <targetReference>Action</targetReference>
         </connector>
+        <fields>
+            <name>complianceImage</name>
+            <extensionName>flowruntime:image</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>imageName</name>
+                <value>
+                    <stringValue>rc_compliance</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>imageWidth</name>
+                <value>
+                    <stringValue>250px</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
         <fields>
             <name>checkboxGroup</name>
             <choiceReferences>RunDataMaskComplianceCheck</choiceReferences>
@@ -110,8 +129,27 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <fields>
+            <name>complianceImage3</name>
+            <extensionName>flowruntime:image</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>imageName</name>
+                <value>
+                    <stringValue>rc_compliance</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>imageWidth</name>
+                <value>
+                    <stringValue>250px</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
             <name>cleared_text</name>
-            <fieldText>&lt;p&gt;Data Mask compliance reports cleared.&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Data Mask compliance reports cleared.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -126,8 +164,27 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <fields>
+            <name>complianceImage2</name>
+            <extensionName>flowruntime:image</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>imageName</name>
+                <value>
+                    <stringValue>rc_compliance</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>imageWidth</name>
+                <value>
+                    <stringValue>250px</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
             <name>intiated_text</name>
-            <fieldText>&lt;p&gt;Data Mask compliance job initiated.&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Data Mask compliance job initiated.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
