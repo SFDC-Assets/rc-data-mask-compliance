@@ -78,7 +78,7 @@ public class RC_DataMaskCompliance {
         
         System.debug('RC_DataMaskCompliance > getMaskedEntityFieldMap - start');
         
-        List<datamask__DataMask_Configuration__mdt> configs = [SELECT Id, DeveloperName, datamask__Active__c, datamask__Status__c
+        List<datamask__DataMask_Configuration__mdt> configs = [SELECT Id, DeveloperName
                                                                //(SELECT Id, DeveloperName, MasterLabel FROM datamask__Masking_Objects__r)
                                                                FROM datamask__DataMask_Configuration__mdt];
         System.debug('RC_DataMaskCompliance > getMaskedEntityFieldMap - configs: (' + configs.size() + ') ' + configs);

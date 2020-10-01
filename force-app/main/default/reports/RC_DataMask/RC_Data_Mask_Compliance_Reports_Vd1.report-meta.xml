@@ -37,6 +37,12 @@
         <field>RC_DM_Compliance_Field__c.ComplianceGroup__c</field>
     </columns>
     <columns>
+        <field>RC_DM_Compliance_Field__c.SecurityClassification__c</field>
+    </columns>
+    <columns>
+        <field>RC_DM_Compliance_Field__c.BusinessStatus__c</field>
+    </columns>
+    <columns>
         <field>RC_DM_Compliance_Field__c.DM_Config__c</field>
     </columns>
     <columns>
