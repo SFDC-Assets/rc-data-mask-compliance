@@ -29,7 +29,10 @@ public class RC_DataMaskCompliance {
                                                                                       Latest_Report__c = true,
                                                                                       Object_Name__c = entityName,
                                                                                       Field_Name__c = complianceFieldName,
-                                                                                      ComplianceGroup__c = complianceField.ComplianceGroup
+                                                                                      //Namespace_Prefix__c = complianceField.NamespacePrefix,
+                                                                                      ComplianceGroup__c = complianceField.ComplianceGroup,
+                                                                                      BusinessStatus__c = complianceField.BusinessStatus,
+                                                                                      SecurityClassification__c = complianceField.SecurityClassification
                                                                                      );
                
                 // masked fields for this entity
@@ -93,11 +96,8 @@ public class RC_DataMaskCompliance {
             for (datamask__Masking_Object__mdt maskingObject : maskingObjects) {
                 System.debug('RC_DataMaskCompliance > getMaskedEntityFieldMap >> masking object: ' + maskingObject);
                 
-                List<datamask__Masking_Field__mdt> maskingFields = [SELECT Id, datamask__API_Name__c, datamask__Masking_Type__c, datamask__Field_Type__c, datamask__Field_Length__c,
-                                                                    datamask__Custom__c, datamask__Custom_Pattern__c, datamask__Masking_Category__c,
-                                                                    datamask__Date_Min__c , datamask__Date_Max__c,
-                                                                    datamask__Pattern_Data__c, datamask__Range_Min__c, datamask__Range_Max__c,
-                                                                    datamask__Required__c, datamask__Unique__c
+                List<datamask__Masking_Field__mdt> maskingFields = [SELECT Id, datamask__API_Name__c, datamask__Masking_Type__c, datamask__Field_Type__c, 
+                                                                    datamask__Field_Length__c, datamask__Masking_Category__c
                                                                     FROM datamask__Masking_Field__mdt WHERE datamask__Masking_Object__c = :maskingObject.Id];
                 
                 // convert from datamask__Masking_Field__mdt to apex type RC_DataMaskField
@@ -169,7 +169,8 @@ public class RC_DataMaskCompliance {
         }
 		*/
         
-        List<FieldDefinition> fieldDefinitions = [SELECT DurableId, EntityDefinitionId, DeveloperName, QualifiedApiName, Description, BusinessOwnerId, BusinessStatus, SecurityClassification, ComplianceGroup  
+        List<FieldDefinition> fieldDefinitions = [SELECT DurableId, EntityDefinitionId, DeveloperName, QualifiedApiName, NamespacePrefix,
+                                                  Description, BusinessOwnerId, BusinessStatus, SecurityClassification, ComplianceGroup  
                                                   FROM FieldDefinition 
                                                   WHERE EntityDefinition.QualifiedApiName IN :entityNames AND ComplianceGroup != NULL
                                                  ];
