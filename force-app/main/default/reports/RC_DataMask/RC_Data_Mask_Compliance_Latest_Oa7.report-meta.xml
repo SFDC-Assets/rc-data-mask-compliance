@@ -8,13 +8,13 @@
             <axisBinding>y</axisBinding>
             <column>RowCount</column>
         </chartSummaries>
-        <chartType>HorizontalBarStacked</chartType>
+        <chartType>VerticalColumnStacked</chartType>
         <enableHoverLabels>false</enableHoverLabels>
         <expandOthers>true</expandOthers>
-        <groupingColumn>RC_DM_Compliance_Field__c.Report_ID__c</groupingColumn>
+        <groupingColumn>RC_DM_Compliance_Field__c.DM_Config__c</groupingColumn>
         <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
-        <secondaryGroupingColumn>RC_DM_Compliance_Field__c.Masked_Indicator__c</secondaryGroupingColumn>
+        <secondaryGroupingColumn>RC_DM_Compliance_Field__c.Object_Name__c</secondaryGroupingColumn>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
@@ -23,13 +23,9 @@
         <summaryAxisRange>Auto</summaryAxisRange>
         <textColor>#000000</textColor>
         <textSize>12</textSize>
-        <title>Compliance Fields w/ Masking Policies</title>
         <titleColor>#000000</titleColor>
         <titleSize>18</titleSize>
     </chart>
-    <columns>
-        <field>RC_DM_Compliance_Field__c.Object_Name__c</field>
-    </columns>
     <columns>
         <field>RC_DM_Compliance_Field__c.Field_Name__c</field>
     </columns>
@@ -37,29 +33,39 @@
         <field>RC_DM_Compliance_Field__c.ComplianceGroup__c</field>
     </columns>
     <columns>
-        <field>RC_DM_Compliance_Field__c.DM_Config__c</field>
-    </columns>
-    <columns>
-        <field>RC_DM_Compliance_Field__c.Masking_Type__c</field>
+        <field>RC_DM_Compliance_Field__c.Masked_Indicator__c</field>
     </columns>
     <columns>
         <field>RC_DM_Compliance_Field__c.Field_Type__c</field>
     </columns>
     <columns>
+        <field>RC_DM_Compliance_Field__c.Masking_Type__c</field>
+    </columns>
+    <columns>
         <field>RC_DM_Compliance_Field__c.Masking_Category__c</field>
     </columns>
+    <filter>
+        <criteriaItems>
+            <column>RC_DM_Compliance_Field__c.Latest_Report__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>RC_DM_Compliance_Field__c.Report_ID__c</field>
+        <field>RC_DM_Compliance_Field__c.DM_Config__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>RC_DM_Compliance_Field__c.Masked_Indicator__c</field>
+        <field>RC_DM_Compliance_Field__c.Object_Name__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Data Mask Compliance Reports</name>
+    <name>Data Mask Compliance (Latest)</name>
     <params>
         <name>co</name>
         <value>1</value>

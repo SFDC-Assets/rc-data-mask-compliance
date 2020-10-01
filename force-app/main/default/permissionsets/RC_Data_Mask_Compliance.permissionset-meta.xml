@@ -17,11 +17,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Contact.Phone</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>RC_DM_Compliance_Field__c.ComplianceGroup__c</field>
         <readable>true</readable>
@@ -39,6 +34,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>RC_DM_Compliance_Field__c.Field_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>RC_DM_Compliance_Field__c.Latest_Report__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

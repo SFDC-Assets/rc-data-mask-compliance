@@ -13,6 +13,7 @@
     <tabs>Data_Mask_Compliance</tabs>
     <tabs>RC_DM_Compliance_Field__c</tabs>
     <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Data_Mask_Compliance_UtilityBar</utilityBar>
 </CustomApplication>

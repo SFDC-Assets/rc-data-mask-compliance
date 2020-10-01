@@ -4,6 +4,9 @@ public class RC_DataMaskCompliance {
     static public void checkMaskedComplianceFields() {
         
         System.debug('RC_DataMaskCompliance > checkMaskedComplianceFields - start');
+        
+        clearLatestFlagOnLastReport();
+        
         Map<String, List<FieldDefinition>> complianceEntityFieldMap = getEntityFieldMap();
         Map<String, List<RC_DataMaskField>> maskedEntityFieldMap = getMaskedEntityFieldMap();
         
@@ -22,7 +25,8 @@ public class RC_DataMaskCompliance {
             	boolean masked = false;
                 
                 RC_DM_Compliance_Field__c reportEntry = new RC_DM_Compliance_Field__c(Report_ID__c = reportID,
-                    																  Report_Date__c = reportDate, 
+                    																  Report_Date__c = reportDate,
+                                                                                      Latest_Report__c = true,
                                                                                       Object_Name__c = entityName,
                                                                                       Field_Name__c = complianceFieldName,
                                                                                       ComplianceGroup__c = complianceField.ComplianceGroup
@@ -203,6 +207,16 @@ public class RC_DataMaskCompliance {
         return entityFieldMap2;
                      
     } // end getEntityFieldMap
+
+	static public void clearLatestFlagOnLastReport() {
+        System.debug('RC_DataMaskCompliance > clearLatestFlagOnLastReport - start');  
+        List<RC_DM_Compliance_Field__c> reportEntries = [SELECT Id FROM RC_DM_Compliance_Field__c WHERE Latest_Report__c = true];
+        for (RC_DM_Compliance_Field__c entry : reportEntries) {
+            entry.Latest_Report__c = false;
+        }
+        update reportEntries;
+        System.debug('RC_DataMaskCompliance > clearLatestFlagOnLastReport - complete');  
+    }
     
     static public void deleteAllComplianceReports() {
         List<RC_DM_Compliance_Field__c> entries = [SELECT Id FROM RC_DM_Compliance_Field__c];
