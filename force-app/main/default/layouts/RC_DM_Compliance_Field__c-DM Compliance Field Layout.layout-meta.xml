@@ -20,15 +20,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Object_Namespace_Prefix__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Object_Name__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Field_Namespace_Prefix__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

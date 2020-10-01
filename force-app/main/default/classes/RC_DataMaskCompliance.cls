@@ -29,7 +29,6 @@ public class RC_DataMaskCompliance {
                                                                                       Latest_Report__c = true,
                                                                                       Object_Name__c = entityName,
                                                                                       Field_Name__c = complianceFieldName,
-                                                                                      //Namespace_Prefix__c = complianceField.NamespacePrefix,
                                                                                       ComplianceGroup__c = complianceField.ComplianceGroup,
                                                                                       BusinessStatus__c = complianceField.BusinessStatus,
                                                                                       SecurityClassification__c = complianceField.SecurityClassification
@@ -79,8 +78,7 @@ public class RC_DataMaskCompliance {
         
         System.debug('RC_DataMaskCompliance > getMaskedEntityFieldMap - start');
         
-        List<datamask__DataMask_Configuration__mdt> configs = [SELECT Id, DeveloperName, MasterLabel,
-                                                               datamask__Active__c, datamask__Status__c
+        List<datamask__DataMask_Configuration__mdt> configs = [SELECT Id, DeveloperName, datamask__Active__c, datamask__Status__c
                                                                //(SELECT Id, DeveloperName, MasterLabel FROM datamask__Masking_Objects__r)
                                                                FROM datamask__DataMask_Configuration__mdt];
         System.debug('RC_DataMaskCompliance > getMaskedEntityFieldMap - configs: (' + configs.size() + ') ' + configs);
@@ -141,7 +139,7 @@ public class RC_DataMaskCompliance {
         
         System.debug('RC_DataMaskCompliance > getEntityFieldMap - start');
         
-        List<EntityDefinition> allEntities = [SELECT DurableId, DeveloperName, MasterLabel, NamespacePrefix, QualifiedApiName 
+        List<EntityDefinition> allEntities = [SELECT DurableId, DeveloperName, MasterLabel, QualifiedApiName 
                                               FROM EntityDefinition WHERE IsCustomSetting = false ORDER BY DeveloperName];
         System.debug('RC_DataMaskCompliance > getEntityFieldMap - allEntities: (' + allEntities.size() + ')');
         
@@ -169,8 +167,8 @@ public class RC_DataMaskCompliance {
         }
 		*/
         
-        List<FieldDefinition> fieldDefinitions = [SELECT DurableId, EntityDefinitionId, DeveloperName, QualifiedApiName, NamespacePrefix,
-                                                  Description, BusinessOwnerId, BusinessStatus, SecurityClassification, ComplianceGroup  
+        List<FieldDefinition> fieldDefinitions = [SELECT DurableId, EntityDefinitionId, DeveloperName, QualifiedApiName, 
+                                                  BusinessStatus, SecurityClassification, ComplianceGroup  
                                                   FROM FieldDefinition 
                                                   WHERE EntityDefinition.QualifiedApiName IN :entityNames AND ComplianceGroup != NULL
                                                  ];
