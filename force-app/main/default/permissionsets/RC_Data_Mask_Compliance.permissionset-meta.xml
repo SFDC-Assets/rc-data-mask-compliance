@@ -43,11 +43,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>RC_DM_Compliance_Field__c.Field_Namespace_Prefix__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>RC_DM_Compliance_Field__c.Field_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -78,11 +73,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>RC_DM_Compliance_Field__c.Object_Namespace_Prefix__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>RC_DM_Compliance_Field__c.Report_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -100,6 +90,11 @@
         <editable>true</editable>
         <field>RC_DM_Compliance_Field__c.isMasked__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>datamask__Masking_Execution_Log__c.datamask__Configuration_Name__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Data Mask Compliance</label>
