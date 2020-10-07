@@ -16,11 +16,22 @@
         <apexClass>RC_DataMaskField</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Contact.Phone</field>
-        <readable>false</readable>
-    </fieldPermissions>
+    <customMetadataTypeAccesses>
+        <enabled>true</enabled>
+        <name>datamask__DataMask_Configuration__mdt</name>
+    </customMetadataTypeAccesses>
+    <customMetadataTypeAccesses>
+        <enabled>true</enabled>
+        <name>datamask__Masking_Field__mdt</name>
+    </customMetadataTypeAccesses>
+    <customMetadataTypeAccesses>
+        <enabled>true</enabled>
+        <name>datamask__Masking_Object__mdt</name>
+    </customMetadataTypeAccesses>
+    <customMetadataTypeAccesses>
+        <enabled>true</enabled>
+        <name>datamask__Object_Metadata__mdt</name>
+    </customMetadataTypeAccesses>
     <fieldPermissions>
         <editable>true</editable>
         <field>RC_DM_Compliance_Field__c.BusinessStatus__c</field>
@@ -92,9 +103,79 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.External_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.Original_Created_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.Sandbox_Org_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.datamask__Configuration_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>datamask__Masking_Execution_Log__c.datamask__Configuration_Name__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.datamask__Error_Message__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.datamask__Has_Master__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.datamask__Masking_Execution_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.datamask__Message__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.datamask__Object_Processing__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.datamask__Record_Count_Total__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.datamask__Records_Failed__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.datamask__Records_Processed__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.datamask__Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.datamask__Type__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Data Mask Compliance</label>
@@ -107,12 +188,25 @@
         <object>RC_DM_Compliance_Field__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>datamask__Masking_Execution_Log__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
     <tabSettings>
         <tab>Data_Mask_Compliance</tab>
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
         <tab>RC_DM_Compliance_Field__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>datamask__Masking_Execution_Log__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
 </PermissionSet>
