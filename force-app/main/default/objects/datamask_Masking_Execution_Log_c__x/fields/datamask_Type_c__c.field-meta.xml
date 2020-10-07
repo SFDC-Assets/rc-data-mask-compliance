@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>datamask_Type_c__c</fullName>
+    <externalDeveloperName>datamask__Type__c</externalDeveloperName>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Execution Start</fullName>
+                <default>false</default>
+                <label>Execution Start</label>
+            </value>
+            <value>
+                <fullName>Pre-Processing Completion</fullName>
+                <default>false</default>
+                <label>Pre-Processing Completion</label>
+            </value>
+            <value>
+                <fullName>Object Completion</fullName>
+                <default>false</default>
+                <label>Object Completion</label>
+            </value>
+            <value>
+                <fullName>Post-Processing Completion</fullName>
+                <default>false</default>
+                <label>Post-Processing Completion</label>
+            </value>
+            <value>
+                <fullName>Execution Completion</fullName>
+                <default>false</default>
+                <label>Execution Completion</label>
+            </value>
+            <value>
+                <fullName>Error</fullName>
+                <default>false</default>
+                <label>Error</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -16,6 +16,10 @@
         <apexClass>RC_DataMaskField</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>SyncDataMaskRunLogstoPRDHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <customMetadataTypeAccesses>
         <enabled>true</enabled>
         <name>datamask__DataMask_Configuration__mdt</name>
@@ -103,6 +107,156 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>datamask_Masking_Execution_Log_c__x.ConnectionReceivedId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>datamask_Masking_Execution_Log_c__x.ConnectionSentId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>datamask_Masking_Execution_Log_c__x.CreatedById__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>datamask_Masking_Execution_Log_c__x.CreatedDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.External_Id_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>datamask_Masking_Execution_Log_c__x.IsDeleted__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>datamask_Masking_Execution_Log_c__x.IsLocked__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>datamask_Masking_Execution_Log_c__x.LastModifiedById__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>datamask_Masking_Execution_Log_c__x.LastModifiedDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>datamask_Masking_Execution_Log_c__x.LastReferencedDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>datamask_Masking_Execution_Log_c__x.LastViewedDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>datamask_Masking_Execution_Log_c__x.MayEdit__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>datamask_Masking_Execution_Log_c__x.Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.Original_Created_Date_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.OwnerId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.Sandbox_Name_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.Sandbox_Org_ID_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>datamask_Masking_Execution_Log_c__x.SystemModstamp__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.datamask_Configuration_Id_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.datamask_Configuration_Name_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.datamask_Error_Message_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.datamask_Has_Master_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.datamask_Masking_Execution_Id_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.datamask_Message_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.datamask_Object_Processing_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.datamask_Record_Count_Total_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.datamask_Records_Failed_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.datamask_Records_Processed_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.datamask_Status_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask_Masking_Execution_Log_c__x.datamask_Type_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>datamask__Masking_Execution_Log__c.External_Id__c</field>
         <readable>true</readable>
@@ -110,6 +264,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>datamask__Masking_Execution_Log__c.Original_Created_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>datamask__Masking_Execution_Log__c.Sandbox_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -187,6 +346,15 @@
         <modifyAllRecords>true</modifyAllRecords>
         <object>RC_DM_Compliance_Field__c</object>
         <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>datamask_Masking_Execution_Log_c__x</object>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>

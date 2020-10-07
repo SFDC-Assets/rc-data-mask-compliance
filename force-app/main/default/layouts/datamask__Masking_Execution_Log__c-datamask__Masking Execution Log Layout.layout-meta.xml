@@ -58,6 +58,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Sandbox_Name__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Original_Created_Date__c</field>
             </layoutItems>
         </layoutColumns>
