@@ -8,4 +8,5 @@
     <protocol>Password</protocol>
     <type>SfdcOrg</type>
     <username>rcox@ryancox-20201001.demo</username>
+    <password>salesforce1</password>
 </ExternalDataSource>

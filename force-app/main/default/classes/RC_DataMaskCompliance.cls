@@ -225,4 +225,13 @@ public class RC_DataMaskCompliance {
     	}
     }
     
+    static public void deleteComplianceReports(List<String> reportIDs) {
+        System.debug('RC_DataMaskCompliance > deleteComplianceReports - reportIDs: ' + reportIDs);
+        List<RC_DM_Compliance_Field__c> entries = [SELECT Id FROM RC_DM_Compliance_Field__c WHERE Report_ID__c IN :reportIDs];
+        if (entries.size() > 0) {
+			delete entries;
+            System.debug('RC_DataMaskCompliance > deleteComplianceReports - deleted ' + entries.size() + ' report entries');  
+    	}
+    }
+    
 } // end RC_DataMaskCompliance
