@@ -7,6 +7,6 @@
     <principalType>NamedUser</principalType>
     <protocol>Password</protocol>
     <type>SfdcOrg</type>
-    <username>rcox@ryancox-20201001.demo</username>
-    <password>salesforce1</password>
+    <username>replacewithProdusername</username>
+    <password>replacewithpassword</password>
 </ExternalDataSource>

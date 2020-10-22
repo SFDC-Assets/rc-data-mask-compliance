@@ -5,8 +5,15 @@ This is an SFDX project that contains a solution that extends Data Mask function
 1. Matching fields with Compliance Categorization to Data Mask configurations
 2. Pushing Data Mask Run Logs to Production 
 
+![Data Mask Compliance Dashboard](docs/images/datamask-compliance-fields.png)
 
+![Data Mask Compliance Dashboard](docs/images/data-mask-compliance-dashboard.png)
 
+![Compliance Check Flow](docs/images/flow-datamask-compliance-check.png)
+
+![Push RunLogs to Prod](docs/images/arch-storing-run-logs-in-prod.png)
+
+![Run Logs Report](docs/images/report-RunLogs.png)
 
 
 ## Development
