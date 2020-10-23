@@ -5,7 +5,7 @@ public class RC_DataMaskCompliance_Test {
         System.debug('RC_DataMaskCompliance_Test >> test > start');    	        
         RC_DataMaskComplianceInvocable.checkMaskedComplianceFields();
         RC_DataMaskDeleteComplianceInvocable.deleteAllComplianceReports();        
-        System.debug('GearOrderController_Test >> test > complete'); 
+        System.debug('RC_DataMaskCompliance_Test >> test > complete'); 
     }
     
 }
