@@ -40,9 +40,12 @@ public class RC_DataMaskCompliance {
                     // no masked fields for this object that has compliance fields
                 } else {
                     // check for matching masking policy for compliance fields
-                    
+        
                     for (RC_DataMaskField maskedField : maskedFields) {
-                        if (maskedField.fieldApiName == complianceFieldName) {
+                        //System.debug('entityName: ' + entityName + ', maskedField object: ' + maskedField.objectApiName 
+                        //             + ', complianceFieldName: ' + complianceFieldName + ', maskedField: ' + maskedField.fieldApiName);
+                        if ((maskedField.objectApiName == entityName) 
+                            && (maskedField.fieldApiName == complianceFieldName)) {
                             masked = true;
                             reportEntry.DM_Config__c = maskedField.dmConfigName;
                             reportEntry.Masking_Type__c = maskedField.maskingType;
@@ -113,7 +116,14 @@ public class RC_DataMaskCompliance {
 				System.debug('RC_DataMaskCompliance > getMaskedEntityFieldMap - masking fields: ' + dmFields.size());                
                 
                 // put object and fields in map
-                entityFieldMap.put(maskingObject.datamask__API_Name__c, dmFields);
+                List<RC_DataMaskField> existing_dmFields = entityFieldMap.get(maskingObject.datamask__API_Name__c);
+                if (existing_dmFields == null) {
+                	entityFieldMap.put(maskingObject.datamask__API_Name__c, dmFields);
+                } else {
+                    // append dmFields to existing dmFields
+                    dmFields.addall(existing_dmFields);
+                    entityFieldMap.put(maskingObject.datamask__API_Name__c, dmFields);
+                }
                 
                 for (RC_DataMaskField dmField : dmFields) {
                     System.debug('RC_DataMaskCompliance > getMaskedEntityFieldMap >>> masking field: ' + dmField);
